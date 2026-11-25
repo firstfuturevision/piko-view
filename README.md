@@ -1,6 +1,6 @@
 # Piko View
 
-Piko 의 현황 화면입니다. [Piko Work](https://github.com/firstfuturevision/FutureVision-AgentHub)(AI 에이전트 작업 화면)와 짝을 이루어, 왼쪽 위 **View | Work** 로 오갑니다. 에이전트가 한 일은 View 의 화면(일정 · 문제 · 문서 · 숫자)으로 사람에게 보입니다.
+Piko 의 현황 화면입니다. Piko Work(AI 에이전트 작업 화면)와 짝을 이루어, 왼쪽 위 **View | Work** 로 오갑니다. 에이전트가 한 일은 View 의 화면(일정 · 문제 · 문서 · 숫자)으로 사람에게 보입니다.
 
 ## 구조: 틀 + 기능 묶음 + 템플릿
 
