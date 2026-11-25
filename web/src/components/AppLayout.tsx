@@ -27,7 +27,7 @@ function savedCollapsed(): boolean {
   }
 }
 
-/** 왼쪽 위: "<이름> [View | Work]" — 이 화면(View)과 Piko Work(작업 화면)를 같은 창에서 오간다.
+/** 왼쪽 위: "<이름> [Work | View]" — 이 화면(View)과 Piko Work(작업 화면)를 같은 창에서 오간다.
  * stacked 면 접은 사이드바용(세로) */
 function PikoSwitch({ stacked = false }: { stacked?: boolean }) {
   const navigate = useNavigate()
@@ -41,12 +41,9 @@ function PikoSwitch({ stacked = false }: { stacked?: boolean }) {
       <span className={`truncate font-bold tracking-tight text-slate-900 ${stacked ? 'max-w-12 text-[13px]' : 'text-[15px]'}`}>{brand}</span>
       <div
         role="tablist"
-        aria-label="View · Work"
+        aria-label="Work · View"
         className={`grid shrink-0 rounded-lg bg-slate-100 p-0.5 ${stacked ? 'grid-cols-1 gap-0.5' : 'grid-cols-2'}`}
       >
-        <button type="button" role="tab" aria-selected onClick={() => navigate('/')} data-tip="View — 현황·업무 화면" className={btn(true)}>
-          View
-        </button>
         <button
           type="button"
           role="tab"
@@ -56,6 +53,9 @@ function PikoSwitch({ stacked = false }: { stacked?: boolean }) {
           className={btn(false)}
         >
           Work
+        </button>
+        <button type="button" role="tab" aria-selected onClick={() => navigate('/')} data-tip="View — 현황·업무 화면" className={btn(true)}>
+          View
         </button>
       </div>
     </div>
@@ -369,7 +369,7 @@ export default function AppLayout() {
             <span className="max-w-full truncate px-1">{item.label}</span>
           </NavLink>
         ))}
-        {/* Work: 같은 창에서 에이전트 작업 화면으로 (왼쪽 위 [View | Work] 와 같다) */}
+        {/* Work: 같은 창에서 에이전트 작업 화면으로 (왼쪽 위 [Work | View] 와 같다) */}
         <button type="button" onClick={goWork} className="flex flex-col items-center justify-center gap-0.5 text-[11px] text-slate-500">
           <Icon name="bot" className="h-5 w-5" />
           Work
