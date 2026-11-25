@@ -1,0 +1,15 @@
+{
+  "name": "default",
+  "title": "기본",
+  "brand": "Piko",
+  "modules": ["schedules", "problems", "kb", "docs"],
+  "nav": [
+    { "title": "홈", "items": [{ "to": "/", "label": "현황", "icon": "home" }, { "module": "schedules" }, { "module": "problems" }] },
+    { "title": "업무", "items": [{ "module": "kb" }, { "module": "docs" }] }
+  ],
+  "home": {
+    "stats": ["problems.attention", "schedules.today"],
+    "panels": ["problems.attention", "schedules.today", "schedules.upcoming"]
+  },
+  "labels": {}
+}

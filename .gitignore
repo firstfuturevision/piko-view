@@ -1,0 +1,8 @@
+node_modules/
+data/
+.venv/
+__pycache__/
+*.sqlite3*
+web/dist/
+config.json
+.env

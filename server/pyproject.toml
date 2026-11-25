@@ -1,0 +1,27 @@
+[project]
+name = "piko-view-server"
+version = "0.1.0"
+description = "Piko View server: 일정 · 문제 해결 · 지식 베이스 · 문서 + 외부 에이전트 도구 API"
+requires-python = ">=3.11"
+dependencies = [
+    "django>=5.2.17,<6",
+    "djangorestframework>=3.18.0",
+    "channels[daphne]>=4.3.2",   # 문서 실시간 공동 편집 (웹소켓)
+    "pycrdt>=0.14.9",            # 공동 편집 Yjs 동기화
+    "pydantic>=2.13",            # 에이전트 도구 인자 스키마
+    "numpy>=2.0",                # 지식 베이스 벡터
+    "pypdf>=6.0",                # 지식 베이스: PDF → Markdown
+    "python-docx>=1.2.0",        # 지식 베이스: Word → Markdown
+    "openpyxl>=3.1.5",           # 지식 베이스: Excel → Markdown
+    "pyyaml>=6.0",               # 지식 베이스: 용어집·평가 파일
+]
+
+[project.optional-dependencies]
+# 지식 베이스 의미 검색(로컬 임베딩)과 한국어 형태소 분석. 없으면 키워드 검색만 쓴다.
+search = [
+    "fastembed>=0.8.0",
+    "kiwipiepy>=0.23.2",
+]
+
+[tool.uv]
+package = false

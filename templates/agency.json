@@ -1,0 +1,16 @@
+{
+  "name": "agency",
+  "title": "외주 개발사(에이전시)",
+  "brand": "Piko",
+  "modules": ["schedules", "problems", "kb", "docs", "projects", "crm", "comms"],
+  "nav": [
+    { "title": "홈", "items": [{ "to": "/", "label": "현황", "icon": "home" }, { "module": "schedules" }, { "module": "comms" }, { "module": "problems" }] },
+    { "title": "업무", "items": [{ "module": "projects" }, { "module": "kb" }, { "module": "docs" }] },
+    { "title": "영업 · 고객", "items": [{ "module": "crm", "page": "leads" }, { "module": "crm", "page": "customers" }] }
+  ],
+  "home": {
+    "stats": ["projects.active", "problems.attention", "crm.openLeads", "schedules.today"],
+    "panels": ["projects.dueSoon", "problems.attention", "crm.openLeads", "crm.followups", "schedules.today", "schedules.upcoming"]
+  },
+  "labels": { "lead": "영업 건", "customer": "고객" }
+}
